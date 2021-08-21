@@ -9,11 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Member;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,31 +49,35 @@ public class MainActivity extends AppCompatActivity {
         EditText id = findViewById(R.id.edit_id);
         EditText pw = findViewById(R.id.edit_pw);
 
-        Button btn_start = (Button)findViewById(R.id.login);
+        Button btn_start = (Button) findViewById(R.id.signup);
         btn_start.setOnClickListener(new Button.OnClickListener(){
+            @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),MeetActivity.class);
+                Intent intent = new Intent(getApplicationContext(),SignupActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btn_signup = (Button)findViewById(R.id.signup);
+        Button btn_signup = (Button)findViewById(R.id.login);
         btn_signup.setOnClickListener(new Button.OnClickListener(){
+            @Override
             public void onClick(View view){
-
-                Log.d(TAG, "test");
                 Map<String, String> map = new HashMap<>();
                 map.put("user_id", id.getText().toString());
                 map.put("user_pass", pw.getText().toString());
+                System.out.println(map);
                 dataService.login.login(map).enqueue(new Callback<User>() {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
+
+                        Log.d(TAG, String.valueOf(response.body()));
                         User result = response.body();
+                        System.out.println(result);
                         if (result.getUser_id().equals("wrong_pass")) {
                             pw.setText("");
                             pw.setHint("비밀번호가 일치하지 않습니다.");
                             pw.setHintTextColor(Color.RED);
-                        } else if (result.getUser_id().equals("no_member")) {
+                        } else if (result.getUser_id().equals("no_user")) {
                             id.setText("");
                             id.setHint("존재하지 않는 회원입니다.");
                             id.setHintTextColor(Color.RED);

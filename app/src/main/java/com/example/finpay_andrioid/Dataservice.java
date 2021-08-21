@@ -31,6 +31,6 @@ interface SingUp {
 }
 
 interface Login {
-    @POST("users/login")
+    @POST("user/login")
     Call<User> login(@Body Map<String, String> map);
 }

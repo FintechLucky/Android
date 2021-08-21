@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Finpay_andrioid">
         <activity android:name=".MeetActivity" />
         <activity android:name=".SignupActivity" />
+        <activity android:name=".SelectActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
