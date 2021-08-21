@@ -25,6 +25,7 @@ public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
@@ -63,7 +64,7 @@ public class SignupActivity extends AppCompatActivity {
                                 id.setHintTextColor(Color.RED);
                             } else {
                                 Toast.makeText(SignupActivity.this, "회원 가입 완료", Toast.LENGTH_SHORT).show();
-                                Intent intent1 = new Intent(getApplicationContext(), SignupActivity.class);
+                                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(intent1);
                             }
 
@@ -86,8 +87,4 @@ public class SignupActivity extends AppCompatActivity {
 
     }
 
-    public void goToLogin(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
-    }
 }

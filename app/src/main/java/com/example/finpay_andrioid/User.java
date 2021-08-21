@@ -16,6 +16,4 @@ public class  User{
     private String user_id;
     private String user_name;
     private String user_pass;
-    private String user_phone;
-    private String user_loc;
 }

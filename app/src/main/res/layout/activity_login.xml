@@ -33,12 +33,67 @@
         tools:layout_editor_absoluteX="107dp"
         tools:layout_editor_absoluteY="214dp" />
 
+    <TableLayout
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="197dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:text="ID: "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="107dp"
+                tools:layout_editor_absoluteY="214dp" />
+
+            <EditText
+                android:id="@+id/edit_id"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/pw"
+                android:layout_width="197dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:text="PW: "
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="107dp"
+                tools:layout_editor_absoluteY="214dp" />
+
+            <EditText
+                android:id="@+id/edit_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp" />
+        </TableRow>
+    </TableLayout>
+
     <Button
         android:id="@+id/login"
         android:layout_width="339dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:text="회원 로그인"
         android:textStyle="bold"
         android:textColor="@color/black"
