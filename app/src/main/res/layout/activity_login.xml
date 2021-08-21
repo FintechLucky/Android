@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:orientation="vertical"
+    android:paddingTop="180dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/finpay"
+        android:layout_width="217dp"
+        android:layout_height="65dp"
+        android:text="F i n     P a y"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/introduce"
+        android:layout_width="197dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:text="취 미 공 유,  쉬 운 정 산"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="회원 로그인"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="회원 가입"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+
+</LinearLayout>

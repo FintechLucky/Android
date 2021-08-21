@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    >
+
+    <TextView
+        android:id="@+id/finpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:text="F i n     P a y"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text=" 회원 가입 "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="이름: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                android:privateImeOptions="defaultInputmode=korean"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="아이디: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="비밀번호: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/pw_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="비밀번호 확인: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_pw_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/card"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text=" 카드 입력 "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="카드사: "
+                android:textSize="15dp"
+                android:privateImeOptions="defaultInputmode=korean"/>
+
+            <EditText
+                android:id="@+id/edit_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="카드번호: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="유효기간: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/cvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="cvc: "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_cvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_marginTop="30dp"
+        android:layout_width="412dp"
+        android:layout_height="73dp"
+        android:layout_gravity="center"
+        android:text="회원가입"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:backgroundTint="@color/main" />
+
+
+</LinearLayout>
