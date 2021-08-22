@@ -15,16 +15,16 @@ import java.util.List;
 public class SelectActivity extends AppCompatActivity {
     private ListView listView;
     private UserListAdapter adapter;
-    private List<User> userList;
+    ArrayList<User> userArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meet_make);
 
-        Intent intent = getIntent();
 
-        final ArrayList<String> items = new ArrayList<String>() ;
+
+        Intent intent = getIntent();
 
         // ArrayAdapter 생성. 아이템 View를 선택(multiple choice)가능하도록 만듦.
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice, items) ;
@@ -41,6 +41,12 @@ public class SelectActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+
+    public void IntiallizeData()
+    {
+        dataList = new ArrayList<User>();
 
     }
 
