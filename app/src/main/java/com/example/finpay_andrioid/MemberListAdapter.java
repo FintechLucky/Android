@@ -4,20 +4,16 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.List;
 
-public class UserListAdapter extends BaseAdapter {
+public class MemberListAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<UserDto> userList;
 
-    public UserListAdapter(Context context, ArrayList<UserDto> userList){
+    public MemberListAdapter(Context context, ArrayList<UserDto> userList){
         this.context = context;
         this.userList = userList;
     }
@@ -46,6 +42,4 @@ public class UserListAdapter extends BaseAdapter {
 
         return v;
     }
-    
-
 }

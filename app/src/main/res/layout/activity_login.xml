@@ -23,10 +23,10 @@
 
     <TextView
         android:id="@+id/introduce"
-        android:layout_width="197dp"
-        android:layout_height="31dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="취 미 공 유,  쉬 운 정 산"
+        android:text="쉽 고 빠 른 정 산"
         android:textColor="@color/black"
         android:textSize="19sp"
         android:textStyle="bold"

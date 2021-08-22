@@ -9,40 +9,4 @@
     android:paddingTop="10dp"
     >
 
-    <TextView
-        android:id="@+id/finpay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="center"
-        android:text="F i n     P a y"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <ScrollView
-        android:id="@+id/scrollView_new"
-        android:layout_width="match_parent"
-        android:layout_height="500dp">
-
-        <ListView
-            android:id="@+id/listView_new"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
-        </ListView>
-
-    </ScrollView>
-
-    <Button
-        android:id="@+id/signup_button"
-        android:layout_marginTop="30dp"
-        android:layout_width="412dp"
-        android:layout_height="73dp"
-        android:layout_gravity="center"
-        android:text="승인요청하기"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:backgroundTint="@color/main" />
-
 </LinearLayout>

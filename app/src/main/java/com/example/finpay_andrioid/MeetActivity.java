@@ -30,6 +30,8 @@ public class MeetActivity extends AppCompatActivity {
     // variable for shared preferences.
     SharedPreferences sharedPreferences;
     String user_id;
+    int value = 0;
+    int value1 = 0;
 
     Dataservice dataService = new Dataservice();
 
@@ -47,10 +49,25 @@ public class MeetActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meet);
+
+        Intent secondIntent = getIntent();
+        value = secondIntent.getIntExtra("value",0);
+        value1 = secondIntent.getIntExtra("value_select", 0);
+
+        Button btn_request = (Button)findViewById(R.id.request_test);
+
+        if (value == 1){
+            btn_request.setVisibility(View.VISIBLE);
+        }
+
+        Button btn_koscom = (Button) findViewById(R.id.test2);
+
+        if(value1 == 1){
+            btn_koscom.setVisibility(View.VISIBLE);
+        }
+
         final Button user_name = findViewById(R.id.mypage);
         user_name.setText(user_id);
-
-
 
         Button btn_start = (Button) findViewById(R.id.signup_button);
         btn_start.setOnClickListener(new Button.OnClickListener(){
@@ -58,6 +75,25 @@ public class MeetActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),SelectActivity.class);
                 intent.putExtra("userList", userList);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_test = (Button) findViewById(R.id.test);
+        btn_test.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), PaymainActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        Button btn_lucky = (Button) findViewById(R.id.request_test);
+        btn_lucky.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), CheckAcitivity.class);
                 startActivity(intent);
             }
         });

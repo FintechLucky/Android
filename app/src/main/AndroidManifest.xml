@@ -13,6 +13,10 @@
         <activity android:name=".MeetActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".SelectActivity"/>
+        <activity android:name=".PaymainActivity"/>
+        <activity android:name=".NewpayActivity"/>
+        <activity android:name=".ResultActivity"/>
+        <activity android:name=".CheckAcitivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

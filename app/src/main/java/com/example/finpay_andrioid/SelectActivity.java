@@ -94,7 +94,6 @@ public class SelectActivity extends AppCompatActivity {
 
                         Log.d(TAG, userList.get(0));
                         Log.d(TAG, sb.toString());
-                        Toast.makeText(getApplicationContext(), meetInput.getText(), Toast.LENGTH_SHORT).show();
 
                         List<String> meetName = new ArrayList<>();
                         meetName.add(String.valueOf(meetInput.getText()));
@@ -118,6 +117,7 @@ public class SelectActivity extends AppCompatActivity {
                         });
 
                         Intent meet = new Intent(getApplicationContext(), MeetActivity.class);
+                        meet.putExtra("value_select", 1);
                         startActivity(meet);
 
                         break;
