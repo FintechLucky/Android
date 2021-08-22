@@ -1,5 +1,6 @@
 package com.example.finpay_andrioid;
 
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.OkHttpClient;
@@ -39,5 +40,5 @@ interface Login {
 
 interface UserList{
     @GET("user/list")
-    Call<User> userList(@Body Map<String, String> map);
+    Call<List<UserDto>> userList();
 }

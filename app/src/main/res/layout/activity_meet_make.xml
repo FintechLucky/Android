@@ -28,9 +28,6 @@
         android:inputType="textPersonName"
         android:text="ID를 입력해주세요." />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="400dp">
 
             <ListView
                 android:id="@+id/listView"
@@ -45,7 +42,6 @@
 
             </ListView>
 
-    </ScrollView>
 
 
     <Button
