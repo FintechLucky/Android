@@ -1,6 +1,8 @@
 package com.example.finpay_andrioid;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,40 +24,38 @@ public class SelectActivity extends AppCompatActivity {
     private UserListAdapter adapter;
     private List<User> userList;
 
+    // creating constant keys for shared preferences.
+    public static final String SHARED_PREFS = "shared_prefs";
+
+    // key for storing Member
+    public static final String USER_ID_KEY = "user_id_key";
+
+    // variable for shared preferences.
+    SharedPreferences sharedPreferences;
+    String user_id;
 
     private static final String TAG = "SelectActivity";
 
-    Dataservice dataService = new Dataservice();
-
     @Override
     protected void onCreate(Bundle savedInstanceState){
+
+        Intent users = getIntent();
+        ArrayList<String> items = users.getStringArrayListExtra("userList");
+
+        sharedPreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+
+        // getting data from shared prefs and
+        // storing it in our string variable.
+        user_id = sharedPreferences.getString(USER_ID_KEY,null);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meet_make);
 
         Intent intent = getIntent();
 
-        // 빈 리스트 생성
-        ArrayList<String> items = new ArrayList<String>() ;
-        dataService.userList.userList().enqueue(new Callback<List<UserDto>>() {
-            @Override
-            public void onResponse(Call<List<UserDto>> call, Response<List<UserDto>> response) {
-                for (UserDto userDto : response.body()) {
-                    Log.d(TAG, userDto.getUser_id());
-                    items.add(userDto.getUser_id());
-                }
 
-
-            }
-
-            @Override
-            public void onFailure(Call<List<UserDto>> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
-
-        Log.d(TAG, String.valueOf(items));
         // ArrayAdapter 생성. 아이템 View를 선택(multiple choice)가능하도록 만듦.
-        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_multiple_choice, items) ;
+        final ArrayAdapter adapter = new ArrayAdapter( this,android.R.layout.simple_list_item_multiple_choice, items) ;
 
         // listview 생성 및 adapter 지정.
         final ListView listView = (ListView)findViewById(R.id.listView);
@@ -71,6 +71,8 @@ public class SelectActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
 }
