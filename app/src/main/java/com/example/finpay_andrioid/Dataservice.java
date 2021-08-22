@@ -39,5 +39,5 @@ interface Login {
 
 interface UserList{
     @GET("user/list")
-    Call<User> userList(@Body Map<String, String> map);
+    Call<User> userList();
 }

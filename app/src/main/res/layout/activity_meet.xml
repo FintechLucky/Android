@@ -37,6 +37,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:text=" 대기 중인 정산들 "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/wait_check"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp">
+
+        </ListView>
+
+    </ScrollView>
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text=" 모임 "
         android:textColor="@color/black"
         android:textSize="15dp"
@@ -46,11 +71,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/meet"
             android:layout_width="wrap_content"
             android:layout_height="400dp">
 
-        </LinearLayout>
+        </ListView>
 
     </ScrollView>
 
