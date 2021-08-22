@@ -1,5 +1,6 @@
 package com.example.finpay_andrioid;
 
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.OkHttpClient;
@@ -25,6 +26,7 @@ public class Dataservice {
     SingUp singUp = retrofitClient.create(SingUp.class);
     Login login = retrofitClient.create(Login.class);
     UserList userList = retrofitClient.create(UserList.class);
+    NewMeet newMeet = retrofitClient.create(NewMeet.class);
 }
 
 interface SingUp {
@@ -39,5 +41,10 @@ interface Login {
 
 interface UserList{
     @GET("user/list")
-    Call<User> userList();
+    Call<List<UserDto>> userList();
+}
+
+interface NewMeet{
+    @POST("meet/save")
+    Call<MeetDto> newMeet(@Body Map<String, List<String>> map);
 }

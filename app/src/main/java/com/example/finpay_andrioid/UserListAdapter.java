@@ -9,14 +9,15 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<User> userList;
+    private ArrayList<UserDto> userList;
 
-    public UserListAdapter(Context context, List<User> userList){
+    public UserListAdapter(Context context, ArrayList<UserDto> userList){
         this.context = context;
         this.userList = userList;
     }
