@@ -93,12 +93,12 @@ public class SelectActivity extends AppCompatActivity {
                         Log.d(TAG, sb.toString());
                         Toast.makeText(getApplicationContext(), meetInput.getText(), Toast.LENGTH_SHORT).show();
 
-
-
+                        List<String> meetName = new ArrayList<>();
+                        meetName.add(String.valueOf(meetInput.getText()));
 
                         Map<String, List<String>> map = new HashMap<>();
                         map.put("userList", userList);
-                        map.put("meetName", (List<String>) meetInput.getText());
+                        map.put("meetName", meetName);
                         Log.d(TAG, String.valueOf(map));
 
                         dataService.newMeet.newMeet(map).enqueue(new Callback<MeetDto>() {
