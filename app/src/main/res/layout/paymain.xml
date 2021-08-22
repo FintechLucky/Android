@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:orientation="vertical"
+    android:paddingTop="70dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/recommendation"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="모임 장소 추천"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/newpay"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="새로운 정산"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/paycheck"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="정산 내역 확인"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+
+</LinearLayout>

@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public class Dataservice {
@@ -23,6 +24,7 @@ public class Dataservice {
 
     SingUp singUp = retrofitClient.create(SingUp.class);
     Login login = retrofitClient.create(Login.class);
+    UserList userList = retrofitClient.create(UserList.class);
 }
 
 interface SingUp {
@@ -33,4 +35,9 @@ interface SingUp {
 interface Login {
     @POST("user/login")
     Call<User> login(@Body Map<String, String> map);
+}
+
+interface UserList{
+    @GET("user/list")
+    Call<User> userList(@Body Map<String, String> map);
 }
