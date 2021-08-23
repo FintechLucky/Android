@@ -14,9 +14,21 @@
         android:layout_width="339dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:text="모임 장소 추천"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/QR"
+        android:layout_width="339dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="결제 QR 코드"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:backgroundTint="#FFFFFF" />
@@ -38,7 +50,7 @@
         android:layout_width="339dp"
         android:layout_height="63dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="50dp"
         android:text="정산 내역 확인"
         android:textStyle="bold"

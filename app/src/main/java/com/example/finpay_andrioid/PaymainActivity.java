@@ -23,6 +23,16 @@ public class PaymainActivity extends AppCompatActivity {
             }
         });
 
+        Button btn_QR = (Button) findViewById(R.id.QR);
+        btn_QR.setOnClickListener(new Button.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(),QRActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btn_check = (Button) findViewById(R.id.paycheck);
         btn_check.setOnClickListener(new Button.OnClickListener(){
 
